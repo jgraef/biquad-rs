@@ -12,10 +12,12 @@ edition = "2018"
 
 
 [dependencies]
-num-traits = { version = "0.2.16", default-features = false, features = ["libm"] }
+num-traits = { version = "0.2.16", default-features = false }
 
 [dev-dependencies]
 rand = "0.8.5"
 
-
-
+[features]
+default = ["libm"]
+std = ["num-traits/std"]
+libm = ["num-traits/libm"]
